@@ -1,0 +1,98 @@
+STYLE.CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../IMG/fondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+/*aca configuro como se veria en computadora*/
+.barras{ display: none;}
+.desplegable{background: #1e1e1e;}
+ul{ display: flex;
+    flex-direction: row;
+}
+ul li{
+    padding: 10px;
+    list-style: none;
+}
+ul li a{
+    color: red;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.1rem;
+}
+nav ul li:hover{background: white;}
+/*aca configuro como se veria en tablet*/
+@media (max-width: 850px){
+    .barras{
+        background-color: #1e1e1e;
+        display: block;
+    }
+    .desplegable{
+        background: none;
+        transform: translate(-100%);
+        transition: 0.5s;
+        font-size: 1.5rem;
+        width: 50%;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    ul{
+        padding: 0;
+    }
+    a{
+        font-size: 1.5rem;
+        padding: 20px 0px 20px 20px;
+        display: block;
+        text-align: left;
+    }
+    .boton_menu{
+        background-image: url('../IMG/icono.png');
+        background-color: white ;
+        background-repeat: no-repeat;
+        height: 45px;
+        width: 37px;
+        background-size: 50px 35px;
+        background-position: center;
+    }
+    button{
+        margin: 5px;
+        border: none;
+        margin: 10px 10px 10px 20px;
+    }
+    /*con esta clase abro y cierro el menu con toggle*/
+    .abrir_menu{
+        background: rgba(30, 30, 30, 0.6);
+        backdrop-filter: blur(2px);
+        transform: translate(0%);
+        width: 50%;
+        transition: 0.5s;
+    }
+    /*con esta clase cambio las barras por una x*/
+    .colocar_x{
+        background-image: url('../IMG/icono.png');
+        background-color: #1e1e1e;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        background-size: 30px 30px;
+        background-position: center;
+    }
+}
+/*aca configuro como se veria en celular*/
+@media (max-width: 500px){
+    .desplegable{
+        width: 100%;
+        height: 100vh;
+        font-size: 1.6rem;
+    }
+}
